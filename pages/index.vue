@@ -29,9 +29,11 @@ const users = ref([
             <tbody>
                 <tr v-for="user in users" :key="user.id" class="hover:bg-gray-50">
                     <td class="px-5">
+                    <NuxtLink :to="'/user/' + user.id" class="hover:text-blue-500 flex items-center space-x-3">
                         <td><IconsSampleCompany/></td>
                         <td class="px-3">{{ user.companyname }}</td>
-                    </td>         
+                    </NuxtLink>
+                    </td>          
                 </tr>
             </tbody>
         </table>
